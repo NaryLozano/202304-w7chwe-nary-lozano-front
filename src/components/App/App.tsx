@@ -1,5 +1,7 @@
+import LoginForm from "../LoginForm/LoginForm";
+
 const App = (): JSX.Element => {
-  return <p>Hello world!</p>;
+  return <LoginForm />;
 };
 
 export default App;
