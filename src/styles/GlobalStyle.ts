@@ -37,13 +37,16 @@ input {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 ul
 {
 list-style: none;
 padding: 0;
 margin: 0;
+}
+img {
+  max-width: 100%;
 }
 `;
 

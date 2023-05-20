@@ -11,9 +11,9 @@ const routes: RouteObject[] = [
         index: true,
         element: <Navigate to={"/login"} replace />,
       },
+      { path: "/login", element: <LoginFormPage /> },
     ],
   },
-  { path: "/login", element: <LoginFormPage /> },
 ];
 
 const appRouter = createBrowserRouter(routes);
