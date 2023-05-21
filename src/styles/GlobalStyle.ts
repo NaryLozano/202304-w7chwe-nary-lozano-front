@@ -8,12 +8,13 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html {
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: ${(prop) => prop.theme.fonts.primary};
   font-weight: 400;
+  background-color: ${(prop) => prop.theme.colors.dark} ;
 }
 
 body {
-  background-color: #fff;
+  background-color: ${(prop) => prop.theme.colors.dark} ;
   margin: 0;
 }
 
@@ -39,12 +40,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 ul
 {
 list-style: none;
 padding: 0;
 margin: 0;
 }
+
 img {
   max-width: 100%;
 }
