@@ -11,7 +11,7 @@ const useUser = () => {
   const getUserToken = async (userData: UserData): Promise<string> => {
     const {
       data: { token },
-    } = await axios.post<{ token: string }>(`${apiURL}/login`, userData);
+    } = await axios.post<{ token: string }>(`${apiURL}/user/login`, userData);
 
     return token;
   };
