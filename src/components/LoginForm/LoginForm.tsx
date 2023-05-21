@@ -7,14 +7,16 @@ const LoginForm = (): JSX.Element => {
 
   const { getUserToken } = useUser();
 
+  const onChangeLogin = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLoginData({ ...loginData, [event.target.id]: event.target.value });
+  };
+
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
     setLoginData({ username: "", password: "" });
     await getUserToken(loginData);
   };
-  const onChangeLogin = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLoginData({ ...loginData, [event.target.id]: event.target.value });
-  };
+
   return (
     <LoginFormStyled>
       <img src="./logo.png" alt="The social network logotype" />
@@ -35,7 +37,12 @@ const LoginForm = (): JSX.Element => {
           onChange={onChangeLogin}
           autoComplete="off"
         />
-        <button className="form__button">Login</button>
+        <button
+          className="form__button"
+          disabled={loginData.username === "" && loginData.password === ""}
+        >
+          Login
+        </button>
       </form>
     </LoginFormStyled>
   );

@@ -22,6 +22,8 @@ const LoginFormStyled = styled.section`
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    color: #b22222;
+    font-weight: bold;
   }
 `;
 
