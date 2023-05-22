@@ -18,9 +18,9 @@ const LoginForm = (): JSX.Element => {
   };
 
   return (
-    <LoginFormStyled>
+    <>
       <img src="./logo.png" alt="The social network logotype" />
-      <form className="login-form" onSubmit={handleSubmit}>
+      <LoginFormStyled className="login-form" onSubmit={handleSubmit}>
         <input
           type="text"
           className="form__user"
@@ -38,13 +38,13 @@ const LoginForm = (): JSX.Element => {
           autoComplete="off"
         />
         <button
-          className="form__button"
+          className="login-form__button"
           disabled={loginData.username === "" && loginData.password === ""}
         >
           Login
         </button>
-      </form>
-    </LoginFormStyled>
+      </LoginFormStyled>
+    </>
   );
 };
 
