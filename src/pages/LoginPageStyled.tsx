@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LoginPageStyled = styled.div`
+const LoginPageStyled = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
